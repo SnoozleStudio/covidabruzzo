@@ -1,0 +1,31 @@
+// Breakpoints
+
+@mixin xs-up {
+  @media (min-width: 36rem) {
+      @content;
+  }
+}
+
+@mixin sm-up {
+  @media (min-width: 48rem) {
+      @content;
+  }
+}
+
+@mixin md-up {
+  @media (min-width: 64rem) {
+      @content;
+  }
+}
+
+@mixin lg-up {
+  @media (min-width: 96rem) {
+      @content;
+  }
+}
+
+@mixin xl-up {
+  @media (min-width: 120rem) {
+      @content;
+  }
+}

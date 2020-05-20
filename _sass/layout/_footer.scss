@@ -1,0 +1,50 @@
+.footer {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  font-weight: 300;
+
+  .link {
+    font-family: $fira;
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #footer-brand {
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .disclaimer {
+    font-family: $fira;
+    font-size: .75rem;
+    margin: 1rem 0;
+  }
+
+  .snoozle-agency {
+    font-family: $fira;
+    font-size: .75rem;
+  }
+
+  .snoozle-email {
+    margin: 1rem 0 1.5rem;
+    color: $white;
+    text-decoration: none;
+    font-size: .75rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .address {
+    font-family: $fira;
+    font-size: .75rem;
+  }
+}

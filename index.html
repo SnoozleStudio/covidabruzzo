@@ -1,0 +1,311 @@
+---
+layout: default
+title: "Coronavirus in Abruzzo, i dati aggiornati"
+description: "Coronavirus in Abruzzo. COVID-19. Aggiornamenti dalla Presidenza del Consiglio dei Ministri - Dipartimento
+della Protezione Civile."
+image: "index.jpg"
+---
+
+<section id="table" class="section">
+  <h1 class="title">Coronavirus in Abruzzo, i dati aggiornati</h1>
+  <P>Ultimo aggiornamento: <spam class="last-update"></spam>, dati forniti dalla Presidenza del
+    Consiglio dei Ministri - Dipartimento della Protezione Civile.</P>
+  <div class="numbers-container">
+    <div class="numbers">
+      <a href="#tp" class="counter col_1">
+        <p class="counter-text text_1"></p>
+        <h2 class="counter-number num_1"></h2>
+        <p class="counter-text-bot">
+          <span class="var_1"></span> (<span class="var_rel_1"></span>)
+        </p>
+      </a>
+      <a href="#d" class="counter col_2">
+        <p class="counter-text text_2"></p>
+        <h2 class="counter-number num_2"></h2>
+        <p class="counter-text-bot">
+          <span class="var_2"></span> (<span class="var_rel_2"></span>)
+        </p>
+      </a>
+      <a href="#dg" class="counter col_3">
+        <p class="counter-text text_3"></p>
+        <h2 class="counter-number num_3"></h2>
+        <p class="counter-text-bot">
+          <span class="var_3"></span> (<span class="var_rel_3"></span>)
+        </p>
+      </a>
+      <a href="#tc" class="counter col_4">
+        <p class="counter-text text_4"></p>
+        <h2 class="counter-number num_4"></h2>
+        <p class="counter-text-bot">
+          <span class="var_4"></span> (<span class="var_rel_4"></span>)
+        </p>
+      </a>
+      <div class="counter col_5">
+        <p class="counter-text text_5"></p>
+        <h2 class="counter-number num_5"></h2>
+        <p class="counter-text-bot">
+          <span class="var_5"></span> (<span class="var_rel_5"></span>)
+        </p>
+      </div>
+      <div class="counter col_6">
+        <p class="counter-text text_6"></p>
+        <h2 class="counter-number num_6"></h2>
+        <p class="counter-text-bot">
+          <span class="var_6"></span> (<span class="var_rel_6"></span>)
+        </p>
+      </div>
+      <div class="counter col_7">
+        <p class="counter-text text_7"></p>
+        <h2 class="counter-number num_7"></h2>
+        <p class="counter-text-bot">
+          <span class="var_7"></span> (<span class="var_rel_7"></span>)
+        </p>
+      </div>
+      <a href="#vtp" class="counter col_8">
+        <p class="counter-text text_8"></p>
+        <h2 class="counter-number num_8"></h2>
+        <p class="counter-text-bot">
+          <span class="var_8"></span> (<span class="var_rel_8"></span>)
+        </p>
+      </a>
+    </div>
+    <p class="red">Le variazioni sono rispetto al giorno precedente.</p>
+  </div>
+  <h3 class="title">I numeri di oggi</h3>
+  <p class="report-text">
+    L'epidemia da SARS-CoV-2 in abruzzo il <span class="last-update-small"></span> segna una variazione sui casi totali
+    giorno
+    su giorno del <span class="var_rel_4"></span> contro il <span class="var_rel_yesterday_4"></span> di ieri. I casi
+    totali sono <span class="num_4"></span>, di cui <span class="num_1"></span>
+    attualmente positivi, <span class="num_6"></span> pazienti in terapia intensiva, <span class="num_2"></span> decessi
+    e <span class="num_3"></span>
+    persone guarite.
+  </p>
+  <div class="lockdown">
+    <h3 class="title">Coronavirus, quando finisce la quarantena?</h3>
+    <div id="cdLockdown" class="cd-container">
+      <div class="cd-value">
+        <div id="cdD"></div>
+        <div class="text-cd">giorni</div>
+      </div>
+      <div class="cd-value">
+        <div id="cdH"></div>
+        <div class="text-cd">ore</div>
+      </div>
+      <div class="cd-value">
+        <div id="cdM"></div>
+        <div class="text-cd">minuti</div>
+      </div>
+      <div class="cd-value">
+        <div id="cdS"></div>
+        <div class="text-cd">secondi</div>
+      </div>
+    </div>
+    <div class="cd-expired" id="cdLockdownExpired"></div>
+  </div>
+  <h3 id="tp" class="sub-title pt-4"><span class="col-1"><span class="text_1"></span></span></h3>
+  <div class="chart-container mb-4">
+    <canvas id="totalePositivi"></canvas>
+  </div>
+  <h3 id="d" class="sub-title pt-4"><span class="col-2"><span class="text_2"></span></span></h3>
+  <div class="chart-container mb-4">
+    <canvas id="decessi"></canvas>
+  </div>
+  <h3 id="dg" class="sub-title pt-4"><span class="col-3"><span class="text_3"></span></span></h3>
+  <div class="chart-container mb-4">
+    <canvas id="dimessiGuariti"></canvas>
+  </div>
+  <h3 id="tc" class="sub-title pt-4"><span class="col-4"><span class="text_4"></span></span></h3>
+  <div class="chart-container mb-4">
+    <canvas id="totaleCasi"></canvas>
+  </div>
+  <h3 id="vtp" class="sub-title pt-4"><span class="col-9"><span class="text_8"></span></span></h3>
+  <p class="chart-text">Nell'istogramma i dati relativi alla <span class="col-9"><span class="text_8"></span></span>.
+    Per tentare di cogliere il trend di fondo del fenomeno inseriamo la media mobile. Media mobile a 3 giorni <span
+      class="col-8">(<span class="sma-3"></span>)</span>, media mobile a 7 giorni <span class="col-1">(<span
+        class="sma-7"></span>)</span> e media mobile a 11 giorni <span class="col-3">(<span
+        class="sma-11"></span>)</span>.</p>
+  <div class="chart-container mb-4">
+    <canvas id="variazioneTotalePositivi"></canvas>
+  </div>
+  <h3 class="sub-title pt-4">Crescita <span class="col-1"><span class="text_8"></span></span></h3>
+  <p class="chart-text">Nell'istogramma i dati relativi alla Crescita della <span class="col-1"><span
+        class="text_8"></span></span> (nuovi contagi / contagi di ieri * 100).</p>
+  <div class="chart-container mb-4">
+    <canvas id="variazioneTotalePositiviCrescita"></canvas>
+  </div>
+  <h3 class="sub-title pt-4"><span class="col-1"><span class="text_8"></span></span> e <span class="col-9"><span
+        class="text_9"></span></span></h3>
+  <p class="chart-text">I dati relativi alla <span class="col-1"><span class="text_8"></span></span> in relazione al
+    numero di <span class="col-9"><span class="text_9"></span></span> al giorno.</p>
+  <div class="chart-container mb-4">
+    <canvas id="variazioneTotalePositiviTamponi"></canvas>
+  </div>
+  <h3 class="sub-title pt-4"><span class="text_1"></span> e <span class="text_9"></span></h3>
+  <p class="chart-text">I dati relativi ai <span class="text_1"></span> giorno in relazione al numero di <span
+      class="text_9"></span> al giorno.</p>
+  <div class="chart-container mb-4">
+    <canvas id="positiviAlTest"></canvas>
+  </div>
+</section>
+
+<section id="main" class="section">
+  <h2 class="title">L'andamento della pandemia da COVID-19</h2>
+  <p class="index-links">
+    <a class="index-link" href="#numeri-complessivi">I numeri complessivi</a>
+    <a class="index-link" href="#situazione-attualmente-positivi">La situazione degli attualmente positivi</a>
+    <a class="index-link" href="#situazione-ospedali">La situazione degli ospedali in Abruzzo</a>
+    <a class="index-link" href="#trend">Il trend</a>
+    <a class="index-link" href="#variazione-assoluta">La variazione ASSOLUTA</a>
+    <a class="index-link" href="#variazione-percentuale">La variazione PERCENTUALE</a>
+    <a class="index-link" href="#tasso-mortalita">Il tasso di mortalità</a>
+    <a class="index-link" href="#fattore-crescita">Il fattore di crescita</a>
+    <a class="index-link" href="#tamponi"><span class="text_9"></span></a>
+    <a class="index-link" href="#tamponi-positivi">PERCENTUALE <span class="text_1"></span></a>
+    <a class="index-link" href="#tamponi-contagi"><span class="text_9"></span> e nuovi contagi</a>
+    <a class="index-link" href="#trend-province">Il trend nelle province</a>
+    <a class="index-link" href="#distribuzione-province">Distribuzione nelle province</a>
+  </p>
+</section>
+
+<section id="numeri-complessivi" class="section">
+  <h2 class="title">I numeri complessivi</h2>
+  <h3 class="sub-title">
+    <span class="col-2"><span class="text_2"></span></span>, <span class="col-3"><span class="text_3"></span></span> e
+    <span class="col-1"><span class="text_1"></span></span> giorno per giorno
+  </h3>
+  <div class="chart-container">
+    <canvas id="numeriComplessivi"></canvas>
+  </div>
+</section>
+
+<section id="situazione-attualmente-positivi" class="section">
+  <h2 class="title">La situazione degli attualmente positivi</h2>
+  <h3 class="sub-title">La situazione dei pazienti in <span class="col-6"><span class="text_6"></span></span>, <span
+      class="col-5"><span class="text_5"></span></span> e in <span class="col-7"><span class="text_7"></span></span>.
+  </h3>
+  <div class="chart-container">
+    <canvas id="situazioneAttualmentePositivi"></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas id="situazioneAttualmentePositiviSingle"></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas id="distribuzioneAttualmentePositivi"></canvas>
+  </div>
+</section>
+
+<section id="situazione-ospedali" class="section">
+  <h2 class="title">La situazione degli ospedali in Abruzzo</h2>
+  <h3 class="sub-title">La situazione dei pazienti in <span class="col-6"><span class="text_6"></span></span>, <span
+      class="col-5"><span class="text_5"></span></span>.</h3>
+  <div class="chart-container">
+    <canvas id="situazioneOspedaliPositivi"></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas id="situazioneOspedaliPositiviSingle"></canvas>
+  </div>
+  <h3 class="sub-title">La situazione dei pazienti in <span class="col-6"><span class="text_6"></span></span>.</h3>
+  <div class="chart-container">
+    <canvas id="situazioneOspedaliIntensiva"></canvas>
+  </div>
+</section>
+
+<section id="trend" class="section">
+  <h2 class="title">Il trend in Abruzzo</h2>
+  <h3 class="sub-title"><span class="col-4"><span class="text_4"></span></span>, <span class="col-1"><span
+        class="text_1"></span></span>, <span class="col-3"><span class="text_3"></span></span> e <span
+      class="col-2"><span class="text_2"></span></span>.</h3>
+  <div class="chart-container">
+    <canvas id="trendAbruzzo"></canvas>
+  </div>
+</section>
+
+<section id="variazione-assoluta" class="section">
+  <h2 class="title">La variazione ASSOLUTA</h2>
+  <h3 class="sub-title"><span class="col-4"><span class="text_4"></span></span>, <span class="col-1"><span
+        class="text_1"></span></span>, <span class="col-3"><span class="text_3"></span></span> e <span
+      class="col-2"><span class="text_2"></span></span>: La variazione ASSOLUTA.</h3>
+  <div class="chart-container">
+    <canvas id="variazioneAssoluta"></canvas>
+  </div>
+</section>
+
+<section id="variazione-percentuale" class="section">
+  <h2 class="title">La variazione PERCENTUALE</h2>
+  <h3 class="sub-title"><span class="col-3"><span class="text_3"></span></span> e <span class="col-2"><span
+        class="text_2"></span></span>: La variazione PERCENTUALE.</h3>
+  <div class="chart-container">
+    <canvas id="variazionePercentuale"></canvas>
+  </div>
+</section>
+
+<section id="tasso-mortalita" class="section">
+  <h2 class="title">Il tasso di mortalità</h2>
+  <h3 class="sub-title">Il tasso di mortalità relativo ai <span class="col-2"><span class="text_2"></span></span></h3>
+  <p class="chart-text">Il fattore di mortalità indica il rapporto tra la VARIAZIONE ASSOLUTA dei <span
+      class="col-2"><span class="text_2"></span></span> e il TOTALE dei casi chiusi (<span class="col-2"><span
+        class="text_2"></span></span> + <span class="col-3"><span class="text_3"></span></span>).</p>
+  <div class="chart-container">
+    <canvas id="tassoMortalita"></canvas>
+  </div>
+</section>
+
+<section id="fattore-crescita" class="section">
+  <h2 class="title">Il fattore di crescita</h2>
+  <h3 class="sub-title">Il fattore di crescita relativo ai <span class="col-1"><span class="text_1"></span></span></h3>
+  <p class="chart-text">Il fattore di crescita percentuale indica il rapporto tra la VARIAZIONE ASSOLUTA e il TOTALE dei
+    <span class="col-1"><span class="text_1"></span></span>. Quando il fattore di crescita è positivo significa che
+    l'epidemia si sta diffondendo, quando è uguale a zero significa che l'epidemia si è fermata, quando è il fattore di
+    crescita è negativo significa che l'epidemia sta regredendo.</p>
+  <div class="chart-container">
+    <canvas id="fattoreCrescita"></canvas>
+  </div>
+</section>
+
+<section id="tamponi" class="section">
+  <h2 class="title"><span class="text_9"></span></h2>
+  <h3 class="sub-title"><span class="col-9"><span class="text_9"></span></span> eseguiti</h3>
+  <div class="chart-container">
+    <canvas id="tamponiEseguiti"></canvas>
+  </div>
+</section>
+
+<section id="tamponi-positivi" class="section">
+  <h2 class="title">PERCENTUALE <span class="col-1"><span class="text_1"></span></span></h2>
+  <h3 class="sub-title"><span class="col-1"><span class="text_1"></span></span> / <span class="col-9"><span
+        class="text_9"></span></span> %</h3>
+  <div class="chart-container">
+    <canvas id="tamponiPositivi"></canvas>
+  </div>
+</section>
+
+<section id="tamponi-contagi" class="section">
+  <h2 class="title"><span class="text_9"></span> e nuovi contagi</h2>
+  <h3 class="sub-title">Rapporto tra <span class="col-9"><span class="text_9"></span></span> e <span class="col-4"><span
+        class="text_4"></span></span></h3>
+  <div class="chart-container">
+    <canvas id="tamponiContagi"></canvas>
+  </div>
+</section>
+
+<section id="trend-province" class="section">
+  <h2 class="title">Il trend nelle province</h2>
+  <h3 class="sub-title">Numero di casi nelle province di: <span class="col-4"><span class="text_ch"></span></span>,
+    <span class="col-1"><span class="text_aq"></span></span>, <span class="col-3"><span class="text_pe"></span></span> e
+    <span class="col-2"><span class="text_te"></span></span>.</h3>
+  <div class="chart-container">
+    <canvas id="trendProvince"></canvas>
+  </div>
+</section>
+
+<section id="distribuzione-province" class="section">
+  <h2 class="title">Distribuzione nelle province</h2>
+  <h3 class="sub-title">Distribuzione del numero di <span class="text_4"></span> nelle province di: <span
+      class="col-4"><span class="text_ch"></span></span>, <span class="col-1"><span class="text_aq"></span></span>,
+    <span class="col-3"><span class="text_pe"></span></span> e <span class="col-2"><span class="text_te"></span></span>.
+  </h3>
+  <div class="chart-container">
+    <canvas id="distribuzioneProvince"></canvas>
+  </div>
+</section>

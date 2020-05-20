@@ -1,0 +1,59 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>
+    {%if page.title %}
+    {{ page.title }} | {{ site.title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+  </title>
+  <meta itemprop="description" name="description"
+    content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <!-- google analytics -->
+  {% if jekyll.environment == "production" %}
+  {% include googleanalytics.html %}
+  <meta name="robots" content="index, follow">
+  {% endif %}
+
+  <!-- chartjs and plugin -->
+  <script src="{{ '/assets/vendor/Chart.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/vendor/chartjs-plugin-style.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/vendor/index.js' | relative_url }}"></script>
+
+  <!-- webfontloader -->
+  <script src="{{ '/assets/js/font.js' | relative_url }}"></script>
+  <!-- font awesome -->
+  <script rel="preload" async src="https://kit.fontawesome.com/449b260b43.js" crossorigin="anonymous"></script>
+
+  <meta property="og:locale" content="{{site.lang}}">
+  <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/{{ page.image }}">
+  <meta property="og:site_name" content="Coronavirus in Abruzzo">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:site" content="@snoozlestudio" />
+  <meta name="twitter:creator" content="@paolomasonnet">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | relative_url }}">
+  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+  <link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | relative_url }}" color="#1e5da8">
+  <meta name="apple-mobile-web-app-title" content="COVID-19 Abruzzo">
+  <meta name="application-name" content="COVID-19 Abruzzo">
+  <meta name="msapplication-TileColor" content="#9d8179">
+  <meta name="theme-color" content="#ffffff">
+
+</head>

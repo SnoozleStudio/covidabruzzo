@@ -1,0 +1,32 @@
+url: "https://covidabruzzo.it" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "SnoozleStudio" # the name of your site, e.g. ACME Corp.
+description: "Coronavirus in Abruzzo. COVID-19. Aggiornamenti dalla Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile."
+lang: "it-IT"
+
+snoozle_url: "https://www.snoozle.studio"
+dati_url: "https://github.com/pcm-dpc/COVID-19"
+
+exclude:
+  - node_modules
+  - Makefile
+  - package-lock.json
+  - package.json
+
+sass:
+  style: compressed
+  sourcemap: development
+
+plugins:
+- jekyll-pwa-plugin
+
+pwa:
+  sw_src_filepath: service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
+  dest_js_directory: assets/js # Required
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "{js,css}/**/*.{js,css}"
+    - index.html
+  precache_glob_ignores: # Optional
+    - sw-register.js

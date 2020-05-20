@@ -1,0 +1,39 @@
+.bottom-nav-container {
+  position: fixed;
+  font-family: $tillitium;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: $blue;
+  border: 2px solid $white;
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+  }
+
+  .button-text {
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: .625rem;
+
+    .link {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+.tabup-container {
+  right: 3.5rem;
+  bottom: .5rem;
+}
+
+.btt-container {
+  right: .5rem;
+  bottom: .5rem;
+}
