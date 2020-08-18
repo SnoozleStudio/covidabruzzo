@@ -81,6 +81,7 @@ image: "index.jpg"
     e <span class="num_3"></span>
     persone guarite.
   </p>
+  {% comment %}
   <div class="lockdown">
     <h3 class="title">Coronavirus, quando finisce la quarantena?</h3>
     <div id="cdLockdown" class="cd-container">
@@ -103,6 +104,7 @@ image: "index.jpg"
     </div>
     <div class="cd-expired" id="cdLockdownExpired"></div>
   </div>
+  {% endcomment %}
   <h3 id="tp" class="sub-title pt-4"><span class="col-1"><span class="text_1"></span></span></h3>
   <div class="chart-container mb-4">
     <canvas id="totalePositivi"></canvas>
@@ -128,24 +130,30 @@ image: "index.jpg"
   <div class="chart-container mb-4">
     <canvas id="variazioneTotalePositivi"></canvas>
   </div>
-  <h3 class="sub-title pt-4">Crescita <span class="col-1"><span class="text_8"></span></span></h3>
-  <p class="chart-text">Nell'istogramma i dati relativi alla Crescita della <span class="col-1"><span
-        class="text_8"></span></span> (nuovi contagi / contagi di ieri * 100).</p>
-  <div class="chart-container mb-4">
-    <canvas id="variazioneTotalePositiviCrescita"></canvas>
-  </div>
-  <h3 class="sub-title pt-4"><span class="col-1"><span class="text_8"></span></span> e <span class="col-9"><span
-        class="text_9"></span></span></h3>
-  <p class="chart-text">I dati relativi alla <span class="col-1"><span class="text_8"></span></span> in relazione al
-    numero di <span class="col-9"><span class="text_9"></span></span> al giorno.</p>
-  <div class="chart-container mb-4">
-    <canvas id="variazioneTotalePositiviTamponi"></canvas>
-  </div>
-  <h3 class="sub-title pt-4"><span class="text_1"></span> e <span class="text_9"></span></h3>
-  <p class="chart-text">I dati relativi ai <span class="text_1"></span> giorno in relazione al numero di <span
-      class="text_9"></span> al giorno.</p>
-  <div class="chart-container mb-4">
-    <canvas id="positiviAlTest"></canvas>
+
+  <div style="display: none;">
+    <h3 class="sub-title pt-4">Crescita <span class="col-1"><span class="text_8"></span></span></h3>
+    <p class="chart-text">Nell'istogramma i dati relativi alla Crescita della <span class="col-1"><span
+          class="text_8"></span></span> (nuovi contagi / contagi di ieri * 100).</p>
+    <div class="chart-container mb-4">
+      <canvas id="variazioneTotalePositiviCrescita"></canvas>
+    </div>
+
+    <h3 class="sub-title pt-4"><span class="col-1"><span class="text_8"></span></span> e <span class="col-9"><span
+          class="text_9"></span></span></h3>
+    <p class="chart-text">I dati relativi alla <span class="col-1"><span class="text_8"></span></span> in relazione al
+      numero di <span class="col-9"><span class="text_9"></span></span> al giorno.</p>
+    <div class="chart-container mb-4">
+      <canvas id="variazioneTotalePositiviTamponi"></canvas>
+    </div>
+
+
+    <h3 class="sub-title pt-4"><span class="text_1"></span> e <span class="text_9"></span></h3>
+    <p class="chart-text">I dati relativi ai <span class="text_1"></span> giorno in relazione al numero di <span
+        class="text_9"></span> al giorno.</p>
+    <div class="chart-container mb-4">
+      <canvas id="positiviAlTest"></canvas>
+    </div>
   </div>
 </section>
 
@@ -282,7 +290,7 @@ image: "index.jpg"
 
 <section id="tamponi-contagi" class="section">
   <h2 class="title"><span class="text_9"></span> e nuovi contagi</h2>
-  <h3 class="sub-title">Rapporto tra <span class="col-9"><span class="text_9"></span></span> e <span class="col-4"><span
+  <h3 class="sub-title">Rapporto tra <span class="col-9"><span class="text_9"></span>/10</span> e <span class="col-4"><span
         class="text_4"></span></span></h3>
   <div class="chart-container">
     <canvas id="tamponiContagi"></canvas>

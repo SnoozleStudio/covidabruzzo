@@ -1,8 +1,8 @@
 const table = document.getElementById("tableUp");
 const up = document.getElementById("up");
 window.addEventListener("scroll", () => {
-    table.style.transform = "rotate("+(window.pageYOffset / 5)+"deg)";
-    up.style.transform = "rotate("+(window.pageYOffset / 5)+"deg)";
+    table.style.transform = "rotate("+(window.pageYOffset / 21)+"deg)";
+    up.style.transform = "rotate("+(window.pageYOffset / 21)+"deg)";
   });
 
 console.log(

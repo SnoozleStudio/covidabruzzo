@@ -209,6 +209,15 @@ function rapportoTamponi(arrayX, arrayY, arrayOut) {
   });
 };
 
+// dividi per 10
+function divide10(arrayIn, arrayOut) {
+  _.zipWith(arrayIn, (i) => {
+    const divided = (i / 10);
+    const relRound = Math.round((divided + Number.EPSILON) * 100) / 100;
+    arrayOut.push(relRound);
+  })
+}
+
 function smaThree(arrayIn, arrayOut) {
   const N = arrayIn.length;
   const someData = [...arrayIn];

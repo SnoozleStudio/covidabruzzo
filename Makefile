@@ -1,7 +1,4 @@
 NPM := npm
-ASSETS_DIR = assets/
-JS_DIR = assets/js/
-SIR_DIR = assets/js/sirmodule/
 VENDOR_DIR = assets/vendor/
 JEKYLL := jekyll
 PROJECT_DEPS := package.json

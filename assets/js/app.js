@@ -247,6 +247,7 @@ async function getChart() {
   };
   const chartVTPintro = new Chart(ctxVTPintro, ctxVTPintroOptions);
 
+
   // istogramma "Crescita variazione totale positivi" curve SMA 3 - 7 - 11
   const dataCC = [];
   crescitaVariazioneNuoviPositivi(dataVTP, dataCC);
@@ -868,8 +869,12 @@ async function getChart() {
 
   const ctxTTC = document.getElementById('tamponiContagi').getContext('2d');
   const TTCRel = [];
+  const TAbsolute10 = [];
 
-  rapportoTamponi(TCAbsolute, TAbsolute, TTCRel);
+  divide10(TAbsolute, TAbsolute10);
+  // console.log(TAbsolute10);
+
+  rapportoTamponi(TCAbsolute, TAbsolute10, TTCRel);
   const ctxTTCOptions = {
     type: 'bar',
     data: {
@@ -884,8 +889,8 @@ async function getChart() {
         categoryPercentage: 0.9,
         order: 2
       }, {
-        label: T,
-        data: TAbsolute,
+        label: (T + '/10'),
+        data: TAbsolute10,
         yAxisID: 'A',
         backgroundColor: covidColor.col9,
         borderWidth: 0,
