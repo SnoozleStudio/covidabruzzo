@@ -81,30 +81,7 @@ image: "index.jpg"
     e <span class="num_3"></span>
     persone guarite.
   </p>
-  {% comment %}
-  <div class="lockdown">
-    <h3 class="title">Coronavirus, quando finisce la quarantena?</h3>
-    <div id="cdLockdown" class="cd-container">
-      <div class="cd-value">
-        <div id="cdD"></div>
-        <div class="text-cd">giorni</div>
-      </div>
-      <div class="cd-value">
-        <div id="cdH"></div>
-        <div class="text-cd">ore</div>
-      </div>
-      <div class="cd-value">
-        <div id="cdM"></div>
-        <div class="text-cd">minuti</div>
-      </div>
-      <div class="cd-value">
-        <div id="cdS"></div>
-        <div class="text-cd">secondi</div>
-      </div>
-    </div>
-    <div class="cd-expired" id="cdLockdownExpired"></div>
-  </div>
-  {% endcomment %}
+  
   <h3 id="tp" class="sub-title pt-4"><span class="col-1"><span class="text_1"></span></span></h3>
   <div class="chart-container mb-4">
     <canvas id="totalePositivi"></canvas>
@@ -129,31 +106,6 @@ image: "index.jpg"
         class="sma-11"></span>)</span>.</p>
   <div class="chart-container mb-4">
     <canvas id="variazioneTotalePositivi"></canvas>
-  </div>
-
-  <div style="display: none;">
-    <h3 class="sub-title pt-4">Crescita <span class="col-1"><span class="text_8"></span></span></h3>
-    <p class="chart-text">Nell'istogramma i dati relativi alla Crescita della <span class="col-1"><span
-          class="text_8"></span></span> (nuovi contagi / contagi di ieri * 100).</p>
-    <div class="chart-container mb-4">
-      <canvas id="variazioneTotalePositiviCrescita"></canvas>
-    </div>
-
-    <h3 class="sub-title pt-4"><span class="col-1"><span class="text_8"></span></span> e <span class="col-9"><span
-          class="text_9"></span></span></h3>
-    <p class="chart-text">I dati relativi alla <span class="col-1"><span class="text_8"></span></span> in relazione al
-      numero di <span class="col-9"><span class="text_9"></span></span> al giorno.</p>
-    <div class="chart-container mb-4">
-      <canvas id="variazioneTotalePositiviTamponi"></canvas>
-    </div>
-
-
-    <h3 class="sub-title pt-4"><span class="text_1"></span> e <span class="text_9"></span></h3>
-    <p class="chart-text">I dati relativi ai <span class="text_1"></span> giorno in relazione al numero di <span
-        class="text_9"></span> al giorno.</p>
-    <div class="chart-container mb-4">
-      <canvas id="positiviAlTest"></canvas>
-    </div>
   </div>
 </section>
 
@@ -285,35 +237,5 @@ image: "index.jpg"
         class="text_9"></span></span> %</h3>
   <div class="chart-container">
     <canvas id="tamponiPositivi"></canvas>
-  </div>
-</section>
-
-<section id="tamponi-contagi" class="section">
-  <h2 class="title"><span class="text_9"></span> e nuovi contagi</h2>
-  <h3 class="sub-title">Rapporto tra <span class="col-9"><span class="text_9"></span>/10</span> e <span class="col-4"><span
-        class="text_4"></span></span></h3>
-  <div class="chart-container">
-    <canvas id="tamponiContagi"></canvas>
-  </div>
-</section>
-
-<section id="trend-province" class="section">
-  <h2 class="title">Il trend nelle province</h2>
-  <h3 class="sub-title">Numero di casi nelle province di: <span class="col-4"><span class="text_ch"></span></span>,
-    <span class="col-1"><span class="text_aq"></span></span>, <span class="col-3"><span class="text_pe"></span></span> e
-    <span class="col-2"><span class="text_te"></span></span>.</h3>
-  <div class="chart-container">
-    <canvas id="trendProvince"></canvas>
-  </div>
-</section>
-
-<section id="distribuzione-province" class="section">
-  <h2 class="title">Distribuzione nelle province</h2>
-  <h3 class="sub-title">Distribuzione del numero di <span class="text_4"></span> nelle province di: <span
-      class="col-4"><span class="text_ch"></span></span>, <span class="col-1"><span class="text_aq"></span></span>,
-    <span class="col-3"><span class="text_pe"></span></span> e <span class="col-2"><span class="text_te"></span></span>.
-  </h3>
-  <div class="chart-container">
-    <canvas id="distribuzioneProvince"></canvas>
   </div>
 </section>

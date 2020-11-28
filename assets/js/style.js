@@ -1,15 +1,15 @@
 const table = document.getElementById("tableUp");
 const up = document.getElementById("up");
 window.addEventListener("scroll", () => {
-    table.style.transform = "rotate("+(window.pageYOffset / 21)+"deg)";
-    up.style.transform = "rotate("+(window.pageYOffset / 21)+"deg)";
+    table.style.transform = "rotate("+(window.pageYOffset / 360)+"deg)";
+    up.style.transform = "rotate("+(window.pageYOffset / 360)+"deg)";
   });
 
 console.log(
   '\n' +
-  'Hello lurker!\n' +
+  'Hello\n' +
   'We are SnoozleStudio!\n' +
-  'www.snoozle.studio\n' +
+  'https://snoozle.studio\n' +
   '                                                                                                          \n' +
   '███████╗███╗   ██╗ ██████╗  ██████╗ ███████╗██╗     ███████╗███████╗████████╗██╗   ██╗██████╗ ██╗ ██████╗ \n' +
   '██╔════╝████╗  ██║██╔═══██╗██╔═══██╗╚══███╔╝██║     ██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║██╔═══██╗\n' +

@@ -66,21 +66,6 @@ function getYesterdayVal(array) {
   return yesterday
 };
 
-// crescita variazione nuovi positivi
-function crescitaVariazioneNuoviPositivi(arrayIn, arrayOut) {
-  const arrayX = [...arrayIn];
-  const arrayY = [...arrayIn];
-  const today = arrayX;
-  arrayY.pop();
-  arrayY.unshift(0);
-  const yesterday = arrayY;
-  _.zipWith(today, yesterday, (i, j) => {
-    const relValue = (((i / j) * 100));
-    const relRound = Math.round((relValue + Number.EPSILON) * 100) / 100;
-    arrayOut.push(relRound);
-  })
-};
-
 // tabella iniziale differenza tra ieri e oggi
 function getDifference(today, yesterday, containers, mainContainers) {
   const variation = today - yesterday;
